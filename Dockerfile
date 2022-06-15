@@ -5,8 +5,8 @@ MAINTAINER Severalnines <info@severalnines.com>
 
 RUN dnf -y install epel-release
 
-#RUN yum -y install openssh-server openssh-clients passwd curl mysql socat && \
-#	yum clean all
+RUN dnf -y install openssh-server openssh-clients passwd curl mysql socat && \
+	dnf clean all
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
