@@ -3,10 +3,10 @@
 FROM centos:6
 MAINTAINER Severalnines <info@severalnines.com>
 
-RUN yum -y install epel-release
+#RUN yum -y install epel-release
 
-RUN yum -y install openssh-server openssh-clients passwd curl mysql socat && \
-	yum clean all
+#RUN yum -y install openssh-server openssh-clients passwd curl mysql socat && \
+#	yum clean all
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
